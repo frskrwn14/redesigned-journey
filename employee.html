@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+        
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <div class="container-fluid" style="margin-left: -10px;">
+          <div class="row">
+            <div class="col-md-12">     
+              <div class="w3-sidebar w3-black w3-bar-block">   
+                <div class="img" style="background-color:orange;">
+                  <img src="Mindzzle Logo 240px.png">
+              </div>
+                <h3 class="w3-bar-item">Menu</h3>
+                    <a href="#" class="w3-bar-item w3-button"><i class='fas fa-user'></i> Profile</a>
+                    <a href="dashboard.html" class="w3-bar-item w3-button"><i class='fas fa-briefcase'></i> Dashboard</a>
+                    <a href="employee.html" class="w3-bar-item w3-button"><i class='fas fa-id-card-alt'></i> Employee</a>
+                    <a href="hierarchy.html" class="w3-bar-item w3-button"><i class='fas fa-user-friends'></i> Hierarchy</a>
+                    <a href="Job Posting.html" class="w3-bar-item w3-button"><i class='fas fa-history'></i> Job Posting</a>
+                    </div>
+            </div>
+                <div class="navbar">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="margin-top:-10px;margin-left: 200px; width:1200px;height: 48px;">
+                  <form class="form-inline" action="/action_page.php">
+                    <button class="btn btn-light" type="submit"><i class='fas fa-search'></i></button>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                  </form>
+                  <div class="dropdown" style="margin-left: 720px;">
+                    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                      <i class='fas fa-user-circle'></i> Your Name
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Link 1</a>
+                      <a class="dropdown-item" href="#">Link 2</a>
+                      <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                  </div>
+                 </nav>  
+              </div>
+          </div>
+            <div class="col-md-10" style="margin-left: 250px;">
+                <div class="row">
+                    <div class="col-md-4">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">+ Add Employee</button>                    
+                        <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add New Employee</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                        <div class="modal-body">
+                            <h6>Choose Employee Email</h6>
+                            <div class="form-group">
+                                    <label for="sel1" placeholder="name@example.com"></label>
+                                    <select class="form-control" id="sel1">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                    </select>
+                                  </div>
+                                  <h6>User Info</h6>
+                                  <hr style="width: 100%; color: gray; height: 1px;" />
+                                  <form>
+                                        <div class="form-group">
+                                          <label for="formGroupExampleInput"><h6>Name</h6></label>
+                                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Full Name">
+                                        </div>
+                                  </form>
+                                  <form>
+                                        <div class="form-group">
+                                          <label for="formGroupExampleInput"><h6>Phone Number</h6></label>
+                                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Phone Number">
+                                        </div>
+                                  </form>
+                                  <form>
+                                        <div class="form-group">
+                                          <label for="formGroupExampleInput"><h6>Address</h6></label>
+                                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Address">
+                                        </div>
+                                  </form>
+                                    <form>
+                                        <div class="form-group">
+                                          <label for="formGroupExampleInput"><h6>Birthday</h6></label>
+                                          <input type="date" class="form-control" id="formGroupExampleInput" placeholder="DD/MM/YYYY">
+                                        </div>
+                                    </form>
+                                    
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6">
+                            <div class="modal-body">    
+                        <h6>Contract Info</h6>
+                        <hr style="width: 100%; color: gray; height: 1px;" />
+                        <h6>Contract Type</h6>
+                        <div class="form-group">
+                                <label for="sel1" placeholder="name@example.com"></label>
+                                <select class="form-control" id="sel1">
+                                  <option>Choose Type</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                </select>
+                              </div>
+                        <h6>Set Hierarchy</h6>
+                        <div class="form-group">
+                                      <label for="sel1" placeholder="name@example.com"></label>
+                                      <select class="form-control" id="sel1">
+                                        <option>Choose Type</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                      </select>
+                                    </div>
+                                    <form>
+                                            <div class="form-group">
+                                              <label for="formGroupExampleInput"><h6>Date In</h6></label>
+                                              <input type="date" class="form-control" id="formGroupExampleInput" placeholder="DD/MM/YYYY">
+                                            </div>
+                                        </form>
+                                        <form>
+                                                <div class="form-group">
+                                                  <label for="formGroupExampleInput"><h6>Date Out</h6></label>
+                                                  <input type="date" class="form-control" id="formGroupExampleInput" placeholder="DD/MM/YYYY">
+                                                </div>
+                                            </form>
+                                            <form>
+                                                    <div class="form-group">
+                                                      <label for="formGroupExampleInput"><h6>Salary</h6></label>
+                                                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Salary">
+                                                    </div>
+                                                </form>
+
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <div class="modal-footer">
+                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                                                            </div>
+                                                    </div>
+                       </div>
+                       </div>
+                    </div>      
+                    </div>
+                </div>
+                </div>
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal1">Add Manually</button>
+    <!-- The Modal -->
+  <div class="modal" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Employee Manually</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <button type="button" class="btn btn-outline-success btn-block"><i class='fas fa-cloud-download-alt'></i> Download .csv Template</button>
+          <div class="or text-center" style="margin-top: 10px; margin-bottom: 10px;"><h6>OR</h6></div>
+          <button type="button" class="btn btn-outline-dark btn-block"><i class='fas fa-cloud-upload-alt'></i> Upload .csv Template</button>
+        </div>
+      </div>
+    </div>
+  </div>
+                    <i class='fas fa-exclamation-circle'></i>
+                </div>
+                </div>
+                  <div class="col-md-12">
+                    <div class="row" style="margin-top:4px">
+                        <div class="col-md-3"><button href="#" button type="button" class="btn btn-light btn-block" style="margin-right:4px; width:100%";>Active</button></div>
+                        <div class="col-md-3"><button href="#" button type="button" class="btn btn-light btn-block" style="margin-right:4px">Applicant</button></div>
+                        <div class="col-md-3"><button href="#" button type="button" class="btn btn-light btn-block" style="margin-right:4px">Ex-Employee</button></div>
+                        <div class="col-md-3"><button href="#" button type="button" class="btn btn-light btn-block" style="margin-right:4px">Reject</button></div>
+                </div>
+                </div>
+                <div class="table-responsive-md text-left" style="margin-top:8px;">
+                <table class="table" id="table" style="width:100%">
+                  <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Division</th>
+                          <th>Age</th>
+                          <th>Contract</th>
+                          <th>Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Andranisa</td>
+                          <td>Staff</td>
+                          <td>23</td>
+                          <td>20/04/2019</td>
+                          <td><button href="#" button type="button" class="btn btn-primary" style="margin-right:4px">De-Assigned</button><button type="button" class="btn btn-secondary">Terminate</button></td>
+                      </tr>
+                      <tr>
+                          <td>Andrea D</td>
+                          <td>Staff</td>
+                          <td>40</td>
+                          <td>20/04/2023</td>
+                          <td><button href="#" button type="button" class="btn btn-primary" style="margin-right:4px">De-Assigned</button><button type="button" class="btn btn-secondary">Terminate</button></td>
+                      </tr>
+                      <tr>
+                          <td>Anna Erra</td>
+                          <td>Board</td>
+                          <td>41</td>
+                          <td>19/02/2020</td>
+                          <td><button href="#" button type="button" class="btn btn-primary" style="margin-right:4px">De-Assigned</button><button type="button" class="btn btn-secondary">Terminate</button></td>
+                      </tr>
+                      <tr>
+                          <td>Annisa Mulya</td>
+                          <td>Staff</td>
+                          <td>22</td>
+                          <td>31/01/2021</td>
+                          <td><button href="#" button type="button" class="btn btn-primary" style="margin-right:4px">De-Assigned</button><button type="button" class="btn btn-secondary">Terminate</button></td>
+                      </tr>
+                      <tr>
+                          <td>Bimo Sakti</td>
+                          <td>Board</td>
+                          <td>23</td>
+                          <td>20/04/2019</td>
+                          <td><button href="#" button type="button" class="btn btn-primary" style="margin-right:4px">De-Assigned</button><button type="button" class="btn btn-secondary">Terminate</button></td>
+                      </tr>                
+                  </tbody>
+              </table>
+              </div>
+            </div>
+            </div>
+            <script>
+              $(document).ready(function() {
+                $('#table').DataTable();
+              });  
+            </script>     
+</body>
+</html>
